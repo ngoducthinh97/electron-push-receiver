@@ -1,6 +1,6 @@
 const { register, listen } = require('push-receiver');
 const { ipcMain } = require('electron');
-const Config = require('electron-config');
+const Store = require('electron-store');
 const {
   START_NOTIFICATION_SERVICE,
   NOTIFICATION_SERVICE_STARTED,
@@ -9,7 +9,7 @@ const {
   TOKEN_UPDATED,
 } = require('./constants');
 
-const config = new Config();
+const config = new Store();
 
 module.exports = {
   START_NOTIFICATION_SERVICE,
